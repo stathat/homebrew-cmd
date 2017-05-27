@@ -1,8 +1,8 @@
 class Stathat < Formula
   desc "Command-line interface to stathat.com"
   homepage "https://stathat.com"
-  url "https://github.com/stathat/cmd/archive/v0.2.1.tar.gz"
-  sha256 "9a63a8104da468e92fd2c50dba577f599cd0f23f93a67ac0babd36b8dfc843a0"
+  url "https://github.com/stathat/cmd/archive/v0.2.2.tar.gz"
+  sha256 "ff790f6b8c2246db30fc9a4c6c7ab1abe2491ed8012fd0925e0197628f268399"
 
   head "https://github.com/stathat/cmd.git"
 
