@@ -1,22 +1,11 @@
 class Stathat < Formula
-  desc "Command-line interface to stathat.com"
-  homepage "https://stathat.com"
-  url "https://github.com/stathat/cmd/archive/v0.2.2.tar.gz"
-  sha256 "e8bc6e307f8ccedeb5d576d70891d5229ee6605355ff901cb6804147a5cc65b8"
-
-  head "https://github.com/stathat/cmd.git"
-
-  depends_on "go" => :build
+  desc "Command-line interface to StatHat"
+  homepage "https://www.stathat.com"
+  url "https://github.com/stathat/cmd/releases/download/v0.2.9/stathat_0.2.9_darwin_amd64.tar.gz"
+  version "0.2.9"
+  sha256 "b9da8061adb14f3a5da2e67a90ffabf8f4baddaa804a73014dec597edb8677e7"
 
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/stathat/cmd/").install "stathat"
-
-    system "go", "build", "-o", bin/"stathat", "-a", "github.com/stathat/cmd/stathat"
-  end
-
-  test do
-    system "#{bin}/stathat", "version"
-    system "#{bin}/stathat", "ping"
+    bin.install "stathat"
   end
 end
